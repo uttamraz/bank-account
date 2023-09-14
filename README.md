@@ -6,17 +6,23 @@ Welcome to the Bank Web App! This web application allows you to perform banking 
 
 ## Usage Instructions
 
-1. **Deposit Tab**: Click the "Deposit" tab to make a deposit. Enter the desired amount in the input field and click "Submit."
+1. **Registration**: Register user using following steps:
 
-2. **Withdraw Tab**: Navigate to the "Withdraw" tab to make a withdrawal. Enter the withdrawal amount in the input field and click "Submit." Be sure not to exceed your account balance.
+   - Enter the Account Name in the provided input field.
+   - Choose the Account Type from the dropdown menu.
+   - Click the "Register" button to complete the registration process.
 
-3. **Check Balance Tab**: Visit the "Check Balance" tab to view your current account balance.
+2. **Deposit Tab**: Click the "Deposit" tab to make a deposit. Enter the desired amount in the input field and click "Submit."
+
+3. **Withdraw Tab**: Navigate to the "Withdraw" tab to make a withdrawal. Enter the withdrawal amount in the input field and click "Submit." Be sure not to exceed your account balance.
+
+4. **Check Balance Tab**: Visit the "Check Balance" tab to view your current account balance.
 
 ## Technical Walkthrough
 
 ### Classes
 
-- The BankAccount class encapsulates the account balance and transaction methods (deposit, withdraw, and updateBalanceLabel).
+- The BankAccount class encapsulates the accountName, accountType, balance, register and transaction methods (deposit, withdraw, and updateBalanceLabel).
 
 ### Switch Statements
 
@@ -35,6 +41,11 @@ Welcome to the Bank Web App! This web application allows you to perform banking 
 - Tabs are used for easy navigation between actions.
 - Active tabs are highlighted with a different color.
 - Error messages are displayed when invalid inputs or insufficient balances are encountered.
+
+## Example
+
+![Web App Screenshot](img/Registration.png)
+![Web App Screenshot](img/Transaction.png)
 
 ## Conclusion
 
