@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Bank Account</title>
+</head>
+
+<body>
+    <div class="center-container">
+        <div id="registration">
+            <div class="card">
+                <h2>User Registration</h2>
+            </div>
+            <div class="card">
+                <label for="accountName">Account Name:</label>
+                <input type="text" id="accountName" placeholder="Enter Account Name">
+                <label for="accountType">Account Type:</label>
+                <select id="accountType">
+                    <option value="Current">Current</option>
+                    <option value="Savings">Savings</option>
+                    <option value="Fixed Deposit">Fixed Deposit</option>
+                </select>
+                <button onclick="registerUser()">Register</button>
+            </div>
+        </div>
+        <div id="accountDetails" style="display: none;">
+            <div class="card">
+                <p>Account Name: <span id="displayAccountName"></span></p>
+                <p>Account Type: <span id="displayAccountType"></span></p>
+            </div>
+            <div class="card">
+                <div class="tabs">
+                    <button id="depositTabLink" class="tablinks" onclick="openTab('depositTab')">Deposit</button>
+                    <button id="withdrawTabLink" class="tablinks" onclick="openTab('withdrawTab')">Withdraw</button>
+                    <button id="checkBalanceTabLink" class="tablinks" onclick="openTab('checkBalanceTab')">Check
+                        Balance</button>
+                </div>
+
+                <div id="depositTab" class="tabcontent">
+                    <input type="number" id="depositAmount" placeholder="Enter Deposit Amount">
+                    <button onclick="performAction('deposit')">Deposit</button>
+                </div>
+
+                <div id="withdrawTab" class="tabcontent">
+                    <input type="number" id="withdrawAmount" placeholder="Enter Withdraw Amount">
+                    <button onclick="performAction('withdraw')">Withdraw</button>
+                </div>
+
+                <div id="checkBalanceTab" class="tabcontent">
+                    <div class="card">Your balance is <span id="balanceValue">$0</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
